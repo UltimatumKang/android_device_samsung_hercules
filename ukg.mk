@@ -2,14 +2,14 @@
 $(call inherit-product, device/samsung/hercules/full_hercules.mk)
 
 # Inherit common product files.
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/ukg/config/common.mk)
 
 # Inherit GSM common stuff
-$(call inherit-product, vendor/aosp/config/gsm.mk)
+$(call inherit-product, vendor/ukg/config/gsm.mk)
 
 # Setup device specific product configuration.
 PRODUCT_DEVICE := hercules
-PRODUCT_NAME := xylon_hercules
+PRODUCT_NAME := ukg_hercules
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := SGH-T989
 
@@ -21,5 +21,5 @@ PRODUCT_PACKAGES += \
     Thinkfree
 
 PRODUCT_COPY_FILES += \
-   vendor/aosp/prebuilt/hybrid_hdpi.conf:system/etc/beerbong/properties.conf \
-   vendor/aosp/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+   vendor/ukg/prebuilt/hybrid_hdpi.conf:system/etc/beerbong/properties.conf \
+   vendor/ukg/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
