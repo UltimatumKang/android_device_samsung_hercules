@@ -16,10 +16,10 @@
 #
 
 # name
-PRODUCT_RELEASE_NAME := ATTGS3
+PRODUCT_RELEASE_NAME := TMOGS2
 
 # device
-$(call inherit-product-if-exists, device/samsung/d2att/full_d2att.mk)
+$(call inherit-product-if-exists, device/samsung/hercules/full_hercules.mk)
 
 # gsm
 $(call inherit-product, vendor/ukg/config/common_gsm.mk)
@@ -31,22 +31,22 @@ PRODUCT_LOCALES := en_US de_DE zh_CN zh_TW cs_CZ nl_BE nl_NL en_AU en_GB en_CA e
 $(call inherit-product, vendor/ukg/config/common_phone.mk)
 
 # products
-PRODUCT_DEVICE := d2att
+PRODUCT_DEVICE := hercules
 PRODUCT_BRAND := Samsung
-PRODUCT_NAME := ukg_d2att
-PRODUCT_MODEL := Samsung Galaxy S 3
+PRODUCT_NAME := ukg_hercules
+PRODUCT_MODEL := Samsung Galaxy S 2
 PRODUCT_MANUFACTURER := Samsung
-PRODUCT_PROPERTY_OVERRIDES += ro.buildzipid=ukg.d2att.$(shell date +%m%d%y).$(shell date +%H%M%S)
+PRODUCT_PROPERTY_OVERRIDES += ro.buildzipid=ukg.hercules.$(shell date +%m%d%y).$(shell date +%H%M%S)
 
 # overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_NUMBER=573038 \
-    PRODUCT_NAME=d2att \
+    PRODUCT_NAME=hercules \
     TARGET_BUILD_TYPE=user \
     BUILD_VERSION_TAGS=release-keys \
-    PRIVATE_BUILD_DESC="d2att-user 4.2.2 JDQ39 573038 release-keys" \
-    BUILD_FINGERPRINT="samsung/d2att:4.2.2/JDQ39/573038:user/release-keys"
+    PRIVATE_BUILD_DESC="hercules-user 4.2.2 JDQ39 573038 release-keys" \
+    BUILD_FINGERPRINT="samsung/hercules:4.2.2/JDQ39/573038:user/release-keys"
 
 # hybrid
 PRODUCT_COPY_FILES +=  \
-    vendor/ukg/prebuilt/hybrid_xhdpi.conf:system/etc/beerbong/properties.conf
+    vendor/ukg/prebuilt/hybrid_xhdpi_no_nav.conf:system/etc/beerbong/properties.conf
