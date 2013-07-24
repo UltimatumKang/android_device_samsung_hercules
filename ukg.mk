@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2012 The CyanogenMod Project
-# Copyright (C) 2013 The Xylon Experimental
+# Copyright (C) 2013 Ultumatumdev
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 #
 
 # name
-PRODUCT_RELEASE_NAME := TMOGS2
+PRODUCT_RELEASE_NAME := hercules
 
 # device
 $(call inherit-product-if-exists, device/samsung/hercules/full_hercules.mk)
@@ -32,21 +32,16 @@ $(call inherit-product, vendor/ukg/config/common_phone.mk)
 
 # products
 PRODUCT_DEVICE := hercules
-PRODUCT_BRAND := Samsung
+PRODUCT_BRAND := samsung
 PRODUCT_NAME := ukg_hercules
-PRODUCT_MODEL := Samsung Galaxy S 2
-PRODUCT_MANUFACTURER := Samsung
+
+PRODUCT_MANUFACTURER := samsung
 PRODUCT_PROPERTY_OVERRIDES += ro.buildzipid=ukg.hercules.$(shell date +%m%d%y).$(shell date +%H%M%S)
 
 # overrides
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_NUMBER=573038 \
-    PRODUCT_NAME=hercules \
-    TARGET_BUILD_TYPE=user \
-    BUILD_VERSION_TAGS=release-keys \
-    PRIVATE_BUILD_DESC="hercules-user 4.2.2 JDQ39 573038 release-keys" \
-    BUILD_FINGERPRINT="samsung/hercules:4.2.2/JDQ39/573038:user/release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SGH-T989 TARGET_DEVICE=SGH-T989 BUILD_FINGERPRINT="samsung/SGH-T989/SGH-T989:4.1.2/JZO54K/T989UVMC6:user/release-keys" PRIVATE_BUILD_DESC="SGH-T989-user 4.1.2 IMM76D UVMC6 release-keys"
 
 # hybrid
 PRODUCT_COPY_FILES +=  \
-    vendor/ukg/prebuilt/hybrid_xhdpi_no_nav.conf:system/etc/beerbong/properties.conf
+    vendor/ukg/prebuilt/hybrid_hdpi.conf:system/etc/beerbong/properties.conf \
+    vendor/ukg/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
